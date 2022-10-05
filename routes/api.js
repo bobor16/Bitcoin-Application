@@ -16,7 +16,7 @@ router.get("/test", (req, res) => res.json({ msg: "backend works" }));
 
 
 router.get("/getbalance", (req, res) => {
-	var dataString = `{"jsonrpc":"1.0","id":"curltext","method":"getbalance","params":["*", 6]}`;
+	var dataString = `{"jsonrpc":"1.0","id":"curltext","method":"getbalance","params":[]}`;
 	var options = {
 		url: `http://${USER}:${PASS}@127.0.0.1:18443/`,
 		method: "POST",
