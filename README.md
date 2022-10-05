@@ -17,7 +17,7 @@ there are the following api calls in this application:
 * Send bitcoin to the address
 * List unspend transactions
 
-The apicalls are represented by replacing `/test` by the following:
+The apicalls are represented by replacing `/test` with the following:
 * /getbalance
 * /getnewaddress
 * /sendtoaddress
