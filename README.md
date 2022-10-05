@@ -1,6 +1,8 @@
-# Bitcoin-Application 
+## Bitcoin-Application 
 
-To run the application:
+> :warning: **it is assumed bitcoin-core is installed and configured:** 
+
+To run the application
 ```
 npm run server
 ```
