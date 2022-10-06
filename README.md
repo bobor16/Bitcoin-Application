@@ -1,6 +1,6 @@
 ## Bitcoin-Application 
 
-> :warning: **it is assumed bitcoin-core is installed and configured:** 
+> :warning: **it is assumed bitcoin-core and node.js is installed and configured:** 
 
 Add a .env file to the root and replace the bitcoin user and password as follows:
 
