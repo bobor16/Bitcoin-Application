@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 var request = require("request");
-
 const dotenv = require("dotenv");
+
 dotenv.config();
 
 const USER = process.env.RPC_USER;
@@ -13,7 +13,6 @@ const headers = {
 };
 
 router.get("/test", (req, res) => res.json({ msg: "backend works" }));
-
 
 router.get("/getbalance", (req, res) => {
 	var dataString = `{"jsonrpc":"1.0","id":"curltext","method":"getbalance","params":[]}`;
@@ -52,9 +51,9 @@ router.get("/getnewaddress", (req, res) => {
 });
 
 
-
 router.get("/sendtoaddress/", (req, res) => {
-	var dataString = `{"jsonrpc": "1.0", "id": "curltest", "method": "sendtoaddress", "params": ["bcrt1q7laksvall9vc6yt8xmhs6r63fmxetxg3ujaps2", 0.0001, "donation", "seans outpost"]}`
+	console.log(req.params.addr)
+	var dataString = `{"jsonrpc": "1.0", "id": "curltext", "method": "sendtoaddress", "params": ["bcrt1q7laksvall9vc6yt8xmhs6r63fmxetxg3ujaps2", 0.0001, "donation", "seans outpost"]}`
 	var options = {
 		url: `http://${USER}:${PASS}@127.0.0.1:18443/`,
 		method: "POST",
@@ -70,8 +69,8 @@ router.get("/sendtoaddress/", (req, res) => {
 	request(options, callback);
 });
 
-router.get("/listunspent/", (req, res) => {
-	var dataString = `{"jsonrpc": "1.0", "id": "curltest", "method": "listunspent", "params": []}`
+router.get("/listunspent/:index", (req, res) => {
+	var dataString = `{"jsonrpc": "1.0", "id": "curltext", "method": "listunspent", "params": [${req.params.index}]}`
 	var options = {
 		url: `http://${USER}:${PASS}@127.0.0.1:18443/`,
 		method: "POST",
