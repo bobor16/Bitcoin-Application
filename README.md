@@ -2,7 +2,15 @@
 
 > :warning: **it is assumed bitcoin-core is installed and configured:** 
 
-To run the application
+Add a .env file to the root and replace the bitcoin user and password as follows:
+
+### .env:
+```
+RPC_USER=yourbitcoinusername
+RPC_PASSWORD=yourbitcoinpassword
+```
+
+### To run the application
 ```
 npm init
 
@@ -23,6 +31,6 @@ The api calls are represented by replacing `/test` with the following:
 * /getbalance
 * /getnewaddress
 * /sendtoaddress
-* /listunspent
+* /listunspent/0
 
 
