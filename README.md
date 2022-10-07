@@ -16,10 +16,14 @@ rpcuser=yourusername
 rpcpassword=yourpassword
 ```
 
-### To run the application
+### install dependencies
 ```
-npm init
+npm install
+```
 
+### To run the application
+
+```
 npm run server
 ```
 
