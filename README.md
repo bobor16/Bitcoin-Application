@@ -6,8 +6,14 @@ Add a .env file to the root and replace the bitcoin user and password as follows
 
 ### .env:
 ```
-RPC_USER=yourbitcoinusername
-RPC_PASSWORD=yourbitcoinpassword
+RPC_USER=yourusername
+RPC_PASSWORD=yourpassword
+```
+in the bitcoin.conf file, add the followin:
+### bitcoin.conf:
+```
+rpcuser=yourusername
+rpcpassword=yourpassword
 ```
 
 ### To run the application
